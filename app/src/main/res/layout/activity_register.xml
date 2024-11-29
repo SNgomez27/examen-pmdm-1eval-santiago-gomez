@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".register"
+    android:background="@color/lightblue">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/loginhGLH1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.05
+" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/loginhGLH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/loginhGLH3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/loginhGLH4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <ImageView
+        android:id="@+id/logoregister"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/animalesmar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/loginhGLH1" />
+
+    <TextView
+        android:id="@+id/textoregister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register examen "
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoregister" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registerUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@id/loginhGLH3"
+        app:layout_constraintStart_toStartOf="@id/loginhGLH2"
+        app:layout_constraintTop_toBottomOf="@+id/textoregister"
+        app:startIconDrawable="@drawable/baseline_person_24"
+
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Nombre de usuario"
+            android:inputType="textPersonName"
+            android:paddingStart="45dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registerContra"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@id/loginhGLH3"
+        app:layout_constraintStart_toStartOf="@id/loginhGLH2"
+        app:layout_constraintTop_toBottomOf="@+id/registerUsername"
+        app:startIconDrawable="@drawable/baseline_person_24"
+
+        >
+
+        <EditText
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Contraseña"
+            android:inputType="textPersonName"
+            android:paddingStart="45dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/registerContraRepit"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="@id/loginhGLH3"
+        app:layout_constraintStart_toStartOf="@id/loginhGLH2"
+        app:startIconDrawable="@drawable/baseline_person_24"
+        app:layout_constraintTop_toBottomOf="@+id/registerContra"
+
+
+        tools:ignore="NotSibling">
+
+        <EditText
+            android:id="@+id/RepContra"
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:hint="Repetir contraseña"
+            android:inputType="textPersonName"
+
+            android:paddingStart="45dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/botonRegist"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/sand"
+        android:hint="Register"
+        android:textColorHint="@color/blue"
+        app:layout_constraintStart_toStartOf="@id/loginhGLH4"
+        app:layout_constraintTop_toBottomOf="@id/registerContraRepit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
